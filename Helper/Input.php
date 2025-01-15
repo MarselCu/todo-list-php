@@ -1,6 +1,17 @@
-<?php 
+<?php
 
-function Input(string $message): string {
-    echo "$message : ";
-    return trim(fgets(STDIN));
+namespace Helper {
+
+    class InputHelper
+    {
+
+        static function input(string $info): string
+        {
+            echo "$info : ";
+            $result = fgets(STDIN);
+            return trim($result);
+        }
+
+    }
+
 }
